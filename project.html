@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>Project Details</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-fluid mt-5 mb-3" src="{% static 'images/Studio.png' %}" alt="alternative">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+
+                    <h2 class="mb-3">About my project</h2>
+                    <p> Milan photo studio is a basic E-commerce site which has almost all the functions of E-commerce webapp. It has functions like login
+                    and logout which holds the cookies of every login made with the default login/logut system of django. It has search function where
+                    people can search different as for as requirement. I used the title of the product for searching for now. It can do basic functions like
+                    add to cart and wishlist. It has place to put some ads using rank. People can give their remarks as there is a
+                    rating system and comment section too. For the admin I have provided blog system where the admin can write
+                    blogs and upload them and I have implemented the comment section in the blogs.</p>
+
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+    <!-- Cards -->
+    <div class="ex-cards-1 pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">1</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>Technical Proficiency</h5>
+                                    <p> Developing an e-commerce website with Django requires an understanding of Python, web development, and the Django framework.
+                                        I learned about models, views, templates, and how to structure a web application. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">2</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>Database Management</h5>
+                                    <p>E-commerce websites rely heavily on databases to store product information, customer data, and order history. By working on this project,
+                                        I gained experience in designing and managing databases, creating relationships between tables, and optimizing queries</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">3</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>Django Rest Framework</h5>
+                                    <p>Through building a basic e-commerce site with Django, I learned how to create APIs using Django Rest Framework.
+                                        This involved setting up endpoints for basic CRUD (Create, Read, Update, Delete) operations on products and orders.
+                                        I also explored simple filtering and searching functionalities.
+                                        These skills are useful for developing web applications that interact with databases and expose data for various purposes.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->   
+            </div> <!-- end of row -->   
+        </div> <!-- end of container -->   
+    </div> <!-- end of ex-cards-1 -->
+    <!-- end of cards -->
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-3 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <p class="mb-5">In summary, building a basic e-commerce website with Django helped me acquire technical skills, database management capabilities,
+                        and an understanding of API development with a focus on CRUD operations, filtering, and searching.</p>
+
+                    <p class="mb-5">I have done few more projects but not as efficient as this one, but if you want to look more you can
+                    go to my  <a href="https://github.com/Santoshrawal1125">GitHub Profile</a></p>
+
+
+                    <a class="btn-solid-reg mb-5" href="{% url 'home' %}">Back</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+
+
+{% endblock %}
