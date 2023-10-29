@@ -5,8 +5,8 @@
         "use": "@vercel/python"
       },
       {
+        "src": "portfolio/static",
         "use": "@vercel/static-build",
-        "config": { "distDir": "portfolio/static" }
       }
     ],
     "routes": [
