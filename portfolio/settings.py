@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-6=^6r5gi8&v9$@t6b-8xi5y90-(8@74v&k@+ecwynlmx-m34w1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "portfolio-santosh.vercel.app", "https://portfolio-santosh.vercel.app/", "http://portfolio-santosh.vercel.app/"]
+if DEBUG:
+    ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]"]
+else:
+    ALLOWED_HOSTS = ['.vercel.app']
+    
+# ALLOWED_HOSTS = ["127.0.0.1", "portfolio-santosh.vercel.app", "https://portfolio-santosh.vercel.app/", "http://portfolio-santosh.vercel.app/"]
 
 
 # Application definition
@@ -118,9 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# Configures the staticfiles directory to serve
+# static files from /static/ on our deployment
+STATIC_ROOT = os.path.join(
+    BASE_DIR, 'staticfiles', 'static')
 
 MEDIA_URL = '/media/'
 # Path where media is stored
