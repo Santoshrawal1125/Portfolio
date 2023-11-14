@@ -32,7 +32,7 @@ DEBUG = False
 # else:
 #     ALLOWED_HOSTS = ['.vercel.app']
     
-ALLOWED_HOSTS = ["127.0.0.1", "santoshrawal.com.np"]
+ALLOWED_HOSTS = ["127.0.0.1", "portfolio-santosh.vercel.app", ".vercel.app", "santoshrawal.com.np", "www.santoshrawal.com.np"]
 
 
 # Application definition
