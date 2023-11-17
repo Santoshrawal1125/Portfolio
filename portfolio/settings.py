@@ -24,9 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6=^6r5gi8&v9$@t6b-8xi5y90-(8@74v&k@+ecwynlmx-m34w1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  
+#make debug false, when you push new update to git as it auto deploy in production
 
-ALLOWED_HOSTS = []
+# if DEBUG:
+#     ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]"]
+# else:
+#     ALLOWED_HOSTS = ['.vercel.app']
+    
+ALLOWED_HOSTS = ["127.0.0.1", "portfolio-santosh.vercel.app", ".vercel.app", "santoshrawal.com.np", "www.santoshrawal.com.np"]
 
 
 # Application definition
@@ -76,10 +82,10 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
@@ -117,10 +123,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# Configures the staticfiles directory to serve
+# static files from /static/ on our deployment
+STATIC_ROOT = os.path.join(
+    BASE_DIR, 'staticfiles', 'static')
 
 MEDIA_URL = '/media/'
 # Path where media is stored
