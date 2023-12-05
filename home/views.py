@@ -52,3 +52,5 @@ def download_cv(request):
             return response
     else:
         return HttpResponseNotFound("CV not found.")
+
+
