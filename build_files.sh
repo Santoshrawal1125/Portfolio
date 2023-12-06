@@ -16,11 +16,11 @@ python -m pip install --upgrade pip
 echo "Building the project..."
 python -m pip install -r requirements.txt
 
+# Collect static files
+echo "Collecting static files..."
+python manage.py collectstatic --noinput --clear
+
 # Make migrations
 echo "Making migrations..."
 python manage.py makemigrations --noinput
 python manage.py migrate --noinput
-
-# Collect static files
-echo "Collecting static files..."
-python manage.py collectstatic --noinput --clear
