@@ -10,3 +10,7 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Data(models.Model):
+    file = models.FileField(upload_to='myfiles/', blank=True)
